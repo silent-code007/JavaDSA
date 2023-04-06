@@ -1,16 +1,16 @@
 class Node5{
     int data;
-    Node5 next;
+    Node6 next;
     Node5(int x){
         data =x;
         next = null;
     }
 }
 class main{
-   static Node5 deleteLastNode(Node5 head){
+   static Node6 deleteLastNode(Node6 head){
        if(head == null)return null;
        if(head.next == null)return null;
-       Node5 curr = head;
+       Node6 curr = head;
        while(curr.next.next != null)
            curr = curr.next;
 
@@ -18,16 +18,16 @@ class main{
        return head;
    }
    public static void main(String []args){
-       Node5 head = new Node5(10);
-       head.next = new Node5(20);
-       head.next.next = new Node5(50);
+       Node6 head = new Node6(10);
+       head.next = new Node6(20);
+       head.next.next = new Node6(50);
        printList(head);
        head = deleteLastNode(head);
        printList(head);
 
    }
-   static void printList(Node5 head){
-       Node5 curr= head;
+   static void printList(Node6 head){
+       Node6 curr= head;
        while(curr !=null){
            System.out.print(curr.data+" ");
            curr = curr.next;
